@@ -19,3 +19,20 @@ cancel the job (new command) cancel ALL idle jobs
 cancel ALL running jobs
 cancel ALL hold jobs
 cancel ALL your jobs!
+
+
+######qstat
+
+-q queue_name	Specifies a user-selectable queue (queue_name)
+-r	Makes the job re-runnable
+-a date_time	Executes the job only after a specific date and time (date_time)
+-V	Exports environment variables in your current environment to the job
+-I	Makes the job run interactively (usually for testing purposes)
+
+
+qstat option	Description
+-u user_list	Displays jobs for users listed in user_list
+-a	Displays all jobs
+-r	Displays running jobs
+-f	Displays the full listing of jobs (returns excessive detail)
+-n	Displays nodes allocated to jobs
