@@ -36,3 +36,6 @@ qstat option	Description
 -r	Displays running jobs
 -f	Displays the full listing of jobs (returns excessive detail)
 -n	Displays nodes allocated to jobs
+######run qsub by name parameter
+
+qsub -F SRR1238550 tophat.sh
