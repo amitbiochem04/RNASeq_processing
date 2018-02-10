@@ -23,6 +23,7 @@ htseq-count -f bam \
 -r pos \
 --type=exon --idattr=gene_id \
 --stranded=reverse \
+--mode=intersection-nonempty \
 ${out}/${name}/accepted_hits.bam \
 ${index}/Neurospora_crassa.NC12.34.gtf > ${data}/${name}.htseq_count.txt
 
