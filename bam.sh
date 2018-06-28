@@ -9,3 +9,6 @@ bamCoverage -b lane1G3_sequence.bam -o G3.bigWig
 sort -k1,1 -k2,2 unsorted.bedGraph > sorted.bedGraph
 ####track
 https://davetang.org/muse/2012/03/15/visualising-rna-seq-like-data/
+###split bw in forward and reverse was 
+bamCoverage -p 20 --filterRNAstrand forward -b lane1G3_sequence.bam -o G3_f.m.bw
+bamCoverage -p 20 --filterRNAstrand reverse -b lane1G3_sequence.bam -o G3_r.m.bw
