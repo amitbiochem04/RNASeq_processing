@@ -58,7 +58,14 @@ gzip > gencode_v${v}_intron.bed.gz
 #let's intersect the two files
 #this shouldn't produce any output
 intersectBed -a gencode_v${v}_exon_merged.bed.gz -b gencode_v${v}_intron.bed.gz
+####
+mysql --user=genome --host=genome-mysql.cse.ucsc.edu -A -e \
+        "select chrom, size from hg19.chromInfo"  > hg19.genome
+####
 
-
-
+cat Mus_musculus.GRCm38.92.gtf |
+awk 'BEGIN{OFS="\t";} $3=="gene" {print $1,$4-1,$5}' |
+~/softwear/bedtools2/bin/sortBed |
+~/softwear/bedtools2/bin/complementBed -i stdin -g GRC38.genome |
+gzip > gencode_v${v}_intergenic.bed.gz
 
