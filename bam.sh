@@ -1,4 +1,6 @@
-
+######
+https://samtools.github.io/hts-specs/SAMv1.pdf
+http://bioinformatics.cvr.ac.uk/blog/tag/cigar-string/
 ##bam to bed
 bamToBed -i lane1G1_sequence.bam -split > accG1.bed
 ###bed to bed graph
