@@ -1,5 +1,8 @@
+####replace 
 here GID to replace gid
 sed -i 's/GID/gid/g' myFile.gff
+awk '{gsub(/1/,"0");}' file
+awk '{gsub(/pattern/,"replacement")}' file
 
 ######
 https://samtools.github.io/hts-specs/SAMv1.pdf
