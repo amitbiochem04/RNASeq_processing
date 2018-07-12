@@ -1,3 +1,6 @@
+here GID to replace gid
+sed -i 's/GID/gid/g' myFile.gff
+
 ######
 https://samtools.github.io/hts-specs/SAMv1.pdf
 http://bioinformatics.cvr.ac.uk/blog/tag/cigar-string/
