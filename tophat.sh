@@ -23,6 +23,6 @@ out=/home/hd/hd_hd/hd_lo149/alignment
 data=/home/hd/hd_hd/hd_lo149/data/Dfrq_0-22
 tophat -p 8 -G ${index}/Neurospora_crassa.NC12.34.gtf -o ${out}/${name} -i 10 -I 5000 --transcriptome-index= ${index}/neurospora_crassa_bowtie_index ${data}/${name}.fastq
 samtools index ${out}/${name}/accepted_hits.bam
-
+#tophat -p 8 -G ${index}/Neurospora_crassa.NC12.34.gtf -o ${out}/${name} -i 10 -I 5000 --transcriptome-index= ${index}/neurospora_crassa_bowtie_index ${data}/${name}.fastq
 
 
